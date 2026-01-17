@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://crd5lua826ruh"]
+
+[ext_resource type="Texture2D" uid="uid://cgguxes4llouf" path="res://marioluigi.png" id="1_pfi7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfi7d"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdf1o"]
+atlas = ExtResource("1_pfi7d")
+region = Rect2(1, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su1s5"]
+atlas = ExtResource("1_pfi7d")
+region = Rect2(37, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpe2w"]
+atlas = ExtResource("1_pfi7d")
+region = Rect2(109, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gnnr"]
+atlas = ExtResource("1_pfi7d")
+region = Rect2(1, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8rpb"]
+atlas = ExtResource("1_pfi7d")
+region = Rect2(19, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdf1o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdf1o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su1s5")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpe2w")
+}],
+"loop": true,
+"name": &"stopping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gnnr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8rpb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pfi7d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mdf1o")
+animation = &"walk"

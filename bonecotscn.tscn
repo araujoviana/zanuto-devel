@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://crd5lua826ruh"]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
