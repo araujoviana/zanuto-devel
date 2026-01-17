@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgguxes4llouf"
-path="res://.godot/imported/marioluigi.png-bf36cf4ce352c3044864516972fdb6ba.ctex"
+path="res://.godot/imported/marioluigi.png-575197274a4ed4ae979947c532901292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://marioluigi.png"
-dest_files=["res://.godot/imported/marioluigi.png-bf36cf4ce352c3044864516972fdb6ba.ctex"]
+source_file="res://assets/marioluigi.png"
+dest_files=["res://.godot/imported/marioluigi.png-575197274a4ed4ae979947c532901292.ctex"]
 
 [params]
 

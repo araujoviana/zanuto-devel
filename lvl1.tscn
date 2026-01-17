@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlkes20enm26p"]
+
+[ext_resource type="Texture2D" uid="uid://c18cmllayj62" path="res://assets/lvl1.png" id="1_vhjmk"]
+[ext_resource type="PackedScene" uid="uid://crd5lua826ruh" path="res://boneco.tscn" id="2_hppyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hppyo"]
+size = Vector2(624, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5y7p"]
+size = Vector2(30.125, 46.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wg0iv"]
+size = Vector2(463, 17.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok8r0"]
+size = Vector2(350, 15)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1408, -313)
+texture = ExtResource("1_vhjmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(312, -201.5)
+shape = SubResource("RectangleShape2D_hppyo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(367.9375, -233.5625)
+shape = SubResource("RectangleShape2D_t5y7p")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(856.5, -215.875)
+shape = SubResource("RectangleShape2D_wg0iv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1328, -202)
+shape = SubResource("RectangleShape2D_ok8r0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(203.29987, 17.041412)
+polygon = PackedVector2Array(1332.7002, -226.04141, 1364.7002, -226.04141, 1364.7002, -243.04141, 1380.7002, -243.04141, 1380.7002, -259.0414, 1396.7002, -259.0414, 1396.7002, -275.0414, 1412.7002, -275.0414, 1412.7002, -211.04141, 1364.7002, -211.04141, 1332.7002, -211.04141)
+
+[node name="Node2D" parent="." instance=ExtResource("2_hppyo")]
+position = Vector2(46, -226)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://crd5lua826ruh"]
+[gd_scene load_steps=10 format=3 uid="uid://crd5lua826ruh"]
 
-[ext_resource type="Texture2D" uid="uid://cgguxes4llouf" path="res://marioluigi.png" id="1_pfi7d"]
+[ext_resource type="Script" uid="uid://ygh5yw0rd81n" path="res://boneco.gd" id="1_8gnnr"]
+[ext_resource type="Texture2D" uid="uid://cgguxes4llouf" path="res://assets/marioluigi.png" id="1_pfi7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfi7d"]
 size = Vector2(16, 16)
@@ -65,11 +66,19 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_8gnnr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_pfi7d")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 2816
+limit_bottom = -626
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_mdf1o")
 animation = &"walk"
